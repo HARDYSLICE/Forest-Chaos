@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=2]
+
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_idle.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_climb0.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_climb1.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_jump.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_duck.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_walk1.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Male adventurer(PLAYER)/PNG/Poses HD/character_maleAdventurer_walk2.png" type="Texture" id=7]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]

@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ASSETS/Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://You_Win.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+outline_size = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="You_Win" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0117647, 0.992157, 0.945098, 1 )
+
+[node name="Win_Label" type="Label" parent="."]
+margin_left = 216.7
+margin_top = 129.94
+margin_right = 787.7
+margin_bottom = 261.94
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.937255, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.74902, 0, 1 )
+text = "You Win!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu_Button" type="Button" parent="."]
+margin_left = 376.04
+margin_top = 413.032
+margin_right = 611.04
+margin_bottom = 472.032
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Main Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win_Credits_Button" type="Button" parent="."]
+margin_left = 375.825
+margin_top = 484.572
+margin_right = 614.825
+margin_bottom = 544.572
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Credits"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win_Replay_Button" type="Button" parent="."]
+margin_left = 380.0
+margin_top = 338.639
+margin_right = 619.0
+margin_bottom = 398.639
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Play Again"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MainMenu_Button" to="." method="_on_MainMenu_Button_pressed"]
+[connection signal="pressed" from="Win_Credits_Button" to="." method="_on_Win_Credits_Button_pressed"]
+[connection signal="pressed" from="Win_Replay_Button" to="." method="_on_Win_Replay_Button_pressed"]

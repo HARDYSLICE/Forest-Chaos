@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ASSETS/Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Game_Over.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="Game_Over" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.454902, 0.0196078, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 210.919
+margin_top = 95.8904
+margin_right = 755.919
+margin_bottom = 263.89
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.929412, 0.0784314, 0.0784314, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.960784, 0, 1 )
+text = "Game Over!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 382.0
+margin_top = 229.713
+margin_right = 615.0
+margin_bottom = 318.713
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You Lost :("
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main_MenuButton" type="Button" parent="."]
+margin_left = 366.937
+margin_top = 411.292
+margin_right = 642.937
+margin_bottom = 508.292
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.47451, 0.964706, 0.917647, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Main Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lose_Credits_button" type="Button" parent="."]
+margin_left = 362.651
+margin_top = 482.075
+margin_right = 634.651
+margin_bottom = 571.075
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.47451, 0.964706, 0.917647, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Credits"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lose_Replay_button" type="Button" parent="."]
+margin_left = 362.315
+margin_top = 341.076
+margin_right = 634.315
+margin_bottom = 430.076
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.47451, 0.964706, 0.917647, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Play Again"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Main_MenuButton" to="." method="_on_Main_MenuButton_pressed"]
+[connection signal="pressed" from="Lose_Credits_button" to="." method="_on_Lose_Credits_button_pressed"]
+[connection signal="pressed" from="Lose_Replay_button" to="." method="_on_Lose_Play_Again_pressed"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://character_spriteframes.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://character.gd" type="Script" id=2]
+[ext_resource path="res://ASSETS/Sound/sounds/jump1.ogg" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.96655
+height = 26.4967
+
+[node name="character" type="KinematicBody2D"]
+position = Vector2( -0.667419, 2.17574 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -14.8101, 7.91464 )
+scale = Vector2( 0.254122, 0.283882 )
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -13.8784, 21.1664 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
